@@ -504,7 +504,7 @@
             <div class="flex flex-col lg:flex-row gap-10">
                 <div class="lg:w-1/2">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0088888050006!2d80.15488931534622!3d13.0989629907559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263d5d3d7e3e9%3A0x83a4a29e2a2f9a5e!2sAmbattur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1623935400000!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3885.6591584015114!2d80.13961527507901!3d13.120765687208483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA3JzE0LjgiTiA4MMKwMDgnMzEuOSJF!5e0!3m2!1sen!2sin!4v1756656879865!5m2!1sen!2sin"
                         width="100%"
                         height="400"
                         style="border:0;"
@@ -555,6 +555,7 @@
                             <p class="text-gray-700">
                                 <i class="fas fa-info-circle text-primary mr-2"></i>
                                 We cover most areas in North and West Chennai. Call us to confirm service availability in your locality.
+                               <br>  Timing : 7 AM to 9:30 PM 
                             </p>
                         </div>
                     </div>
@@ -690,6 +691,8 @@
                     </button>
                     <div class="accordion-content mt-2 text-gray-600" id="faq-content-2">
                         Yes, we cover Avadi and most parts of Tiruvallur. Please call us with your exact location to confirm service availability in your specific area.
+
+                       
                     </div>
                 </div>
 
@@ -793,9 +796,10 @@
                                 <div>
                                     <h4 class="font-bold mb-1">Phone</h4>
                                     <p class="opacity-90 mb-2">
-                                        <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a>
+                                        <a href="tel:+919876543210" class="hover:underline">+91 88709 40365</a>
+                                        <a href="tel:+919876543210" class="hover:underline">,+91 90258 85302</a>
                                     </p>
-                                    <a href="tel:+919876543210" class="inline-block bg-white text-primary hover:bg-gray-100 font-medium py-2 px-4 rounded-lg transition shadow-sm text-sm">
+                                    <a href="tel:+918870940365" class="inline-block bg-white text-primary hover:bg-gray-100 font-medium py-2 px-4 rounded-lg transition shadow-sm text-sm">
                                         <i class="fas fa-phone-alt mr-2"></i> Tap to Call
                                     </a>
                                 </div>
@@ -809,7 +813,7 @@
                                     <p class="opacity-90 mb-2">
                                         Chat with us for quick support
                                     </p>
-                                    <a href="https://wa.me/919876543210" target="_blank" class="inline-block bg-white text-primary hover:bg-gray-100 font-medium py-2 px-4 rounded-lg transition shadow-sm text-sm">
+                                    <a href="https://wa.me/918870940365" target="_blank" class="inline-block bg-white text-primary hover:bg-gray-100 font-medium py-2 px-4 rounded-lg transition shadow-sm text-sm">
                                         <i class="fab fa-whatsapp mr-2"></i> Chat Now
                                     </a>
                                 </div>
