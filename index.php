@@ -17,7 +17,7 @@
     <meta property="og:title" content="LIVE HOME SERVICE | Washing Machine, AC & Fridge Repair in Chennai">
     <meta property="og:description" content="Expert Washing Machine, AC, and Fridge repair services in Chennai. Trusted home appliance repair at your doorstep.">
     <meta property="og:image" content="./assets/img/logo.png">
-    <meta property="og:url" content="https://www.livehomeservice.in">
+    <meta property="og:url" content="https://www.livehomeservices.in">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
@@ -37,8 +37,8 @@
             "@type": "HomeAndConstructionBusiness",
             "name": "LIVE HOME SERVICE",
             "image": "./assets/img/logo.png",
-            "@id": "https://www.livehomeservice.in",
-            "url": "https://www.livehomeservice.in",
+            "@id": "https://www.livehomeservices.in",
+            "url": "https://www.livehomeservices.in",
             "telephone": "+91-9876543210",
             "address": {
                 "@type": "PostalAddress",
@@ -889,6 +889,30 @@
             reviewForm.reset();
         });
     }
+// FAQ accordion logic
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-question').forEach(function(btn, idx) {
+        btn.addEventListener('click', function() {
+            var faqNum = idx + 1;
+            var content = document.getElementById('faq-content-' + faqNum);
+            if (content) {
+                if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                    content.style.maxHeight = '0px';
+                } else {
+                    // Close all others
+                    document.querySelectorAll('.accordion-content').forEach(function(c) {
+                        c.style.maxHeight = '0px';
+                    });
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            }
+        });
+    });
+    // Initialize all closed
+    document.querySelectorAll('.accordion-content').forEach(function(c) {
+        c.style.maxHeight = '0px';
+    });
+});
 </script>
 <script>
     // Mobile menu toggle logic
