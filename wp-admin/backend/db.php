@@ -1,15 +1,15 @@
 <?php
 
 
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$dbname = 'livehome';
-
 // $host = 'localhost';
-// $user = 'vattava2_livehome';
-// $password = 'vattava2_livehome';
-// $dbname = 'vattava2_livehome';
+// $user = 'root';
+// $password = '';
+// $dbname = 'livehome';
+
+$host = 'localhost';
+$user = 'vattava2_livehome';
+$password = 'vattava2_livehome';
+$dbname = 'vattava2_livehome';
 
 $conn = new mysqli($host, $user, $password, $dbname);
 
