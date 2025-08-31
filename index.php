@@ -278,7 +278,7 @@
             <h1 class="text-3xl md:text-5xl font-bold mb-4">Fast & Reliable Appliance Repair in Chennai</h1>
             <p class="text-lg md:text-xl mb-8">Washing Machine • Air Conditioner • Fridge Service at Your Doorstep</p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="tel:+919876543210" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-full font-medium transition shadow-lg">
+                <a href="tel:+918870940365" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-full font-medium transition shadow-lg">
                     <i class="fas fa-phone-alt mr-2"></i> Call Now
                 </a>
                 <a href="#contact" class="border-2 border-white hover:bg-white hover:text-gray-800 text-white px-8 py-3 rounded-full font-medium transition shadow-lg">
