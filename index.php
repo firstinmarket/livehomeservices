@@ -263,7 +263,7 @@
                     <li><a href="#areas" class="block py-2 text-gray-700 hover:text-primary transition">Areas</a></li>
                     <li><a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition">Contact</a></li>
                     <li>
-                        <a href="tel:+919876543210" class="block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium text-center transition shadow-md">
+                        <a href="tel:+918870940365" class="block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium text-center transition shadow-md">
                             <i class="fas fa-phone-alt mr-2"></i> Call Now
                         </a>
                     </li>
