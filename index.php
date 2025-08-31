@@ -242,7 +242,6 @@
                 </div>
                 <h1 class="text-xl font-bold text-gray-800">LIVE HOME SERVICE</h1>
             </div>
-
             <nav class="hidden md:block">
                 <ul class="flex space-x-8">
                     <li><a href="#home" class="text-gray-700 hover:text-primary transition">Home</a></li>
@@ -250,21 +249,12 @@
                     <li><a href="#areas" class="text-gray-700 hover:text-primary transition">Areas</a></li>
                     <li><a href="#contact" class="text-gray-700 hover:text-primary transition">Contact</a></li>
                 </ul>
+            </nav>
+            <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
-        </div>
-        </section>
-
-        <!-- Footer -->
-
-        </div>
-
-        <button class="md:hidden text-gray-700" id="mobile-menu-button">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-        </div>
-
-
-        <div class="md:hidden hidden bg-white   shadow-lg" id="mobile-menu">
+        <div class="md:hidden hidden bg-white shadow-lg w-full absolute left-0 top-full" id="mobile-menu">
             <div class="container mx-auto px-4 py-3">
                 <ul class="flex flex-col space-y-3">
                     <li><a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a></li>
@@ -896,66 +886,36 @@
     }
 </script>
 <script>
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+    // Mobile menu toggle logic
+    document.addEventListener('DOMContentLoaded', function() {
+        var mobileMenuButton = document.getElementById('mobile-menu-button');
+        var mobileMenu = document.getElementById('mobile-menu');
 
-
-    function toggleFAQ(id) {
-        const content = document.getElementById(`faq-content-${id}`);
-        const icon = document.querySelector(`.faq-question:nth-of-type(${id}) i`);
-
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-            icon.classList.remove('fa-minus');
-            icon.classList.add('fa-plus');
-        } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            icon.classList.remove('fa-plus');
-            icon.classList.add('fa-minus');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
         }
-    }
 
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                var targetElement = document.querySelector(targetId);
 
-    const carousel = document.getElementById('testimonial-carousel');
-    const prevButton = document.getElementById('prev-testimonial');
-    const nextButton = document.getElementById('next-testimonial');
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
 
-    if (prevButton && nextButton) {
-        prevButton.addEventListener('click', () => {
-            carousel.scrollBy({
-                left: -300,
-                behavior: 'smooth'
-            });
-        });
-
-        nextButton.addEventListener('click', () => {
-            carousel.scrollBy({
-                left: 300,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-
-                // Close mobile menu if open
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 }
-            }
+            });
         });
     });
 </script>
