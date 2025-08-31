@@ -16,7 +16,7 @@
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="LIVE HOME SERVICE | Washing Machine, AC & Fridge Repair in Chennai">
     <meta property="og:description" content="Expert Washing Machine, AC, and Fridge repair services in Chennai. Trusted home appliance repair at your doorstep.">
-    <meta property="og:image" content="https://www.livehomeservice.in/assets/og-image.jpg">
+    <meta property="og:image" content="./assets/img/logo.png">
     <meta property="og:url" content="https://www.livehomeservice.in">
     <meta property="og:type" content="website">
 
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LIVE HOME SERVICE | Appliance Repair in Chennai">
     <meta name="twitter:description" content="Expert Washing Machine, AC, and Fridge repair services in Chennai. Book now for trusted technicians.">
-    <meta name="twitter:image" content="https://www.livehomeservice.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="./assets/img/logo.png">
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
@@ -35,7 +35,7 @@
             "@context": "https://schema.org",
             "@type": "HomeAndConstructionBusiness",
             "name": "LIVE HOME SERVICE",
-            "image": "https://www.livehomeservice.in/assets/og-image.jpg",
+            "image": "./assets/img/logo.png",
             "@id": "https://www.livehomeservice.in",
             "url": "https://www.livehomeservice.in",
             "telephone": "+91-9876543210",
