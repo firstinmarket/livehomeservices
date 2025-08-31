@@ -726,7 +726,7 @@
                         <i class="fas fa-plus text-primary"></i>
                     </button>
                     <div class="accordion-content mt-2 text-gray-600" id="faq-content-5">
-                        We're open from 9 AM to 9 PM, 7 days a week including Sundays and public holidays. Emergency services may be available outside these hours with prior arrangement.
+                        We're open from 7 AM to 9:30 PM, 7 days a week including Sundays and public holidays. Emergency services may be available outside these hours with prior arrangement.
                     </div>
                 </div>
             </div>
