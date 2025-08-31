@@ -25,7 +25,8 @@
     <meta name="twitter:title" content="LIVE HOME SERVICE | Appliance Repair in Chennai">
     <meta name="twitter:description" content="Expert Washing Machine, AC, and Fridge repair services in Chennai. Book now for trusted technicians.">
     <meta name="twitter:image" content="./assets/img/logo.png">
-
+<!-- search console -->
+    <meta name="google-site-verification" content="9kRkUP9M2dWn1CYg0sBTBRVILOY9mKIs8sE7nghI6qI" />
     <!-- Favicon -->
     <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
 
