@@ -576,80 +576,50 @@
             <div class="relative">
                 <div class="testimonial-carousel flex overflow-x-auto gap-6 pb-6 scrollbar-hide" id="testimonial-carousel">
                     <?php
-                    // Fetch reviews from database
-                    require_once 'wp-admin/backend/db.php';
-                    $reviews = $conn->query("SELECT name, location, rating, feedback FROM testimonials ORDER BY id DESC LIMIT 10");
-                    if ($reviews && $reviews->num_rows > 0) {
-                        while ($row = $reviews->fetch_assoc()) {
-                            $stars = intval($row['rating']);
-                            echo '<div class="testimonial-card flex-shrink-0 w-full sm:w-2/3 md:w-1/3 bg-white p-6 rounded-xl shadow-sm">';
-                            echo '<div class="flex items-center mb-4">';
-                            echo '<div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4">';
-                            echo '<i class="fas fa-user text-primary"></i>';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<h4 class="font-bold text-gray-800">' . htmlspecialchars($row['name']) . '</h4>';
-                            echo '<p class="text-gray-500 text-sm">' . htmlspecialchars($row['location']) . '</p>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '<div class="flex mb-2 text-yellow-400">';
-                            for ($i = 0; $i < 5; $i++) {
-                                if ($i < $stars) {
-                                    echo '<i class="fas fa-star"></i>';
-                                } else {
-                                    echo '<i class="far fa-star"></i>';
-                                }
+                    // Show only default testimonials, no backend/database
+                    $defaultTestimonials = [
+                        [
+                            'name' => 'Priya S.',
+                            'location' => 'Anna Nagar',
+                            'rating' => 5,
+                            'feedback' => 'Quick and professional service! My washing machine was fixed the same day.'
+                        ],
+                        [
+                            'name' => 'Ramesh K.',
+                            'location' => 'Ambattur',
+                            'rating' => 4,
+                            'feedback' => 'Technician was polite and explained the issue clearly. AC works great now.'
+                        ],
+                        [
+                            'name' => 'Sowmya V.',
+                            'location' => 'Kolathur',
+                            'rating' => 5,
+                            'feedback' => 'Highly recommend! Fast fridge repair and reasonable charges.'
+                        ]
+                    ];
+                    foreach ($defaultTestimonials as $row) {
+                        $stars = intval($row['rating']);
+                        echo '<div class="testimonial-card flex-shrink-0 w-full sm:w-2/3 md:w-1/3 bg-white p-6 rounded-xl shadow-sm">';
+                        echo '<div class="flex items-center mb-4">';
+                        echo '<div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4">';
+                        echo '<i class="fas fa-user text-primary"></i>';
+                        echo '</div>';
+                        echo '<div>';
+                        echo '<h4 class="font-bold text-gray-800">' . htmlspecialchars($row['name']) . '</h4>';
+                        echo '<p class="text-gray-500 text-sm">' . htmlspecialchars($row['location']) . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<div class="flex mb-2 text-yellow-400">';
+                        for ($i = 0; $i < 5; $i++) {
+                            if ($i < $stars) {
+                                echo '<i class="fas fa-star"></i>';
+                            } else {
+                                echo '<i class="far fa-star"></i>';
                             }
-                            echo '</div>';
-                            echo '<p class="text-gray-600">' . htmlspecialchars($row['feedback']) . '</p>';
-                            echo '</div>';
                         }
-                    } else {
-                        // Show default testimonials if DB fails or no reviews
-                        $defaultTestimonials = [
-                            [
-                                'name' => 'Priya S.',
-                                'location' => 'Anna Nagar',
-                                'rating' => 5,
-                                'feedback' => 'Quick and professional service! My washing machine was fixed the same day.'
-                            ],
-                            [
-                                'name' => 'Ramesh K.',
-                                'location' => 'Ambattur',
-                                'rating' => 4,
-                                'feedback' => 'Technician was polite and explained the issue clearly. AC works great now.'
-                            ],
-                            [
-                                'name' => 'Sowmya V.',
-                                'location' => 'Kolathur',
-                                'rating' => 5,
-                                'feedback' => 'Highly recommend! Fast fridge repair and reasonable charges.'
-                            ]
-                        ];
-                        foreach ($defaultTestimonials as $row) {
-                            $stars = intval($row['rating']);
-                            echo '<div class="testimonial-card flex-shrink-0 w-full sm:w-2/3 md:w-1/3 bg-white p-6 rounded-xl shadow-sm">';
-                            echo '<div class="flex items-center mb-4">';
-                            echo '<div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4">';
-                            echo '<i class="fas fa-user text-primary"></i>';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<h4 class="font-bold text-gray-800">' . htmlspecialchars($row['name']) . '</h4>';
-                            echo '<p class="text-gray-500 text-sm">' . htmlspecialchars($row['location']) . '</p>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '<div class="flex mb-2 text-yellow-400">';
-                            for ($i = 0; $i < 5; $i++) {
-                                if ($i < $stars) {
-                                    echo '<i class="fas fa-star"></i>';
-                                } else {
-                                    echo '<i class="far fa-star"></i>';
-                                }
-                            }
-                            echo '</div>';
-                            echo '<p class="text-gray-600">' . htmlspecialchars($row['feedback']) . '</p>';
-                            echo '</div>';
-                        }
+                        echo '</div>';
+                        echo '<p class="text-gray-600">' . htmlspecialchars($row['feedback']) . '</p>';
+                        echo '</div>';
                     }
                     ?>
 
